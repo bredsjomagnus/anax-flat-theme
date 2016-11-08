@@ -11,6 +11,9 @@
     height: 80px;
 }
 
+.logo-1{
+    display: none;
+}
 .site-logo-text,
 .navbar2,
 .profile {
@@ -25,6 +28,10 @@
         text-decoration: none;
         color: black;
     }
+}
+
+.rm-max.rm-navbar{
+    display: none;
 }
 
 @maxButtonFontSize: 1.8em;
@@ -43,6 +50,22 @@
     img {
         vertical-align: bottom;
     }
+}
+
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.footer {
+    background-color: #878a9e;
+    padding: 10px 0 10px 0;
+
+}
+.footer-column{
+    padding: 10px 0 0 2%;
+    width: 30%;
+    color: white;
+    // background-color: #50667e;
 }
 
 /** --------------------------------------------------------------
@@ -74,7 +97,12 @@
 }
 @media screen and (max-width: 880px) {
    .footer-column{
-       width: 100%;
+       width: 98%;
+       border-bottom: 1px solid #374d65;
+
+   }
+   .footer{
+       overflow-x: hidden;
    }
 }
 
@@ -82,6 +110,9 @@
   .navbar2 {
       display: none;
       width: 0;
+  }
+  .rm-max.rm-navbar{
+      display: block;
   }
   .site-logo-text {
       width: 90%;

@@ -717,6 +717,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .site-header {
   height: 80px;
 }
+.logo-1 {
+  display: none;
+}
 .site-logo-text,
 .navbar2,
 .profile {
@@ -730,6 +733,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   text-decoration: none;
   color: black;
 }
+.rm-max.rm-navbar {
+  display: none;
+}
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -740,6 +746,18 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .site-logo-text-icon img {
   vertical-align: bottom;
+}
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.footer {
+  background-color: #878a9e;
+  padding: 10px 0 10px 0;
+}
+.footer-column {
+  padding: 10px 0 0 2%;
+  width: 30%;
+  color: white;
 }
 /** --------------------------------------------------------------
  *  Responsive design
@@ -767,13 +785,20 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 @media screen and (max-width: 880px) {
   .footer-column {
-    width: 100%;
+    width: 98%;
+    border-bottom: 1px solid #374d65;
+  }
+  .footer {
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 590px) {
   .navbar2 {
     display: none;
     width: 0;
+  }
+  .rm-max.rm-navbar {
+    display: block;
   }
   .site-logo-text {
     width: 90%;
