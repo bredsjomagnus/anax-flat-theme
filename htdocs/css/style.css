@@ -1,7 +1,11 @@
 /** 
 * Anax Flat theme.
 */
+<<<<<<< HEAD
 /**
+=======
+/** 
+>>>>>>> c619ba689128f484b0e7d7725ac359e7b48bf676
  * Base theme including all modules needed.
  *
  * Each module is within its own
@@ -10,6 +14,7 @@
  * be override modules/some-module.less. This is useful when several themes
  * the same modules.
  */
+<<<<<<< HEAD
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -481,6 +486,8 @@ template {
 .site-header {
   position: relative;
 }
+=======
+>>>>>>> c619ba689128f484b0e7d7725ac359e7b48bf676
 /** --------------------------------------------------------------
  *  Logo images
  */
