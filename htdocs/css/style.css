@@ -415,26 +415,90 @@ template {
   display: none;
 }
 /**
- * Regions, basics to show off the regions.
+ * Responsive Grid
  */
+/**
+ * A small clearfix:
+ * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
+ */
+/**
+ * Wrap grid in a container.
+ */
+/**
+ * All columns must be wrapped in a row.
+ */
+/**
+ * Create a column spanning @col columns.
+ */
+/**
+ * Push a column @offset columns.
+ */
+/**
+ * Pull a column left @offset columns.
+ */
+/**
+ * Pull a column right @offset columns.
+ */
+body {
+  overflow-x: hidden;
+}
 .wrap-all {
-  margin: 0 auto;
-  max-width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  /*Eget tillägg*/
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 960px;
 }
 .footer-column {
+  display: inline;
   float: left;
-  width: 33%;
+  width: 31.25%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
 }
-.footer-column-wrapper {
-  overflow: auto;
+.footer-column ul {
+  margin: 0;
+  padding: 1em;
+  list-style-type: circle;
 }
 .sidebar {
-  width: 33%;
+  display: inline;
   float: left;
+  width: 31.25%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
 }
 .main .has-sidebar {
-  width: 67%;
+  display: inline;
   float: left;
+  width: 64.58333333%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
+}
+.block.site-footer {
+  display: block;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
+  padding-top: 50px;
+}
+.block.site-footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main {
+  display: block;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
+  margin-left: 0.5%;
+}
+.main::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .outer-wrap-footer {
   clear: both;
@@ -442,6 +506,15 @@ template {
 }
 .site-footer {
   text-align: center;
+  display: block;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
+}
+.site-footer::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .site-footer ul {
   margin: 0;
@@ -450,11 +523,6 @@ template {
 }
 .site-footer li {
   display: inline;
-}
-.footer-column ul {
-  margin: 0;
-  padding: 1em;
-  list-style-type: circle;
 }
 .next-previous .next,
 .next-previous .previous {
@@ -480,6 +548,15 @@ template {
 }
 .site-header {
   position: relative;
+  display: block;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
+}
+.site-header::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 /**
  * Style for responsive menu
@@ -3045,9 +3122,128 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   overflow: visible;
   clip: auto;
 }
+/**
+ * Typographic font families to choose from.
+ */
+/**
+ * Default font-families
+ */
+/**
+ * Size and lineheight calculation for magicNumber 24
+ *
+ * 3em     * 16px   = 48 => line-height: 48    = 1
+ * 2.875em * 16px   = 46 => line-height: 48/46 = 1.0435
+ * 2.75em  * 16px   = 44 => line-height: 48/44 = 1.0909
+ * 2.625em * 16px   = 42 => line-height: 48/42 = 1.1429
+ * 2.5em   * 16px   = 40 => line-height: 48/40 = 1.2
+ * 2.375em * 16px   = 38 => line-height: 48/38 = 1.2632
+ * 2.25em  * 16px   = 36 => line-height: 48/36 = 1.3333
+ * 2.125em * 16px   = 34 => line-height: 48/34 = 1.4118
+ * 2em     * 16px   = 32 => line-height: 48/32 = 1.5
+ * 1.875em * 16px   = 30 => line-height: 48/30 = 1.6
+ * 1.75em  * 16px   = 28 => line-height: 48/28 = 1.7143
+ * 1.625em * 16px   = 26 => line-height: 48/26 = 1.8462
+ * 1.5em   * 16px   = 24 => line-height: 24    = 1
+ * 1.375em * 16px   = 22 => line-height: 24/22 = 1.0909
+ * 1.25em  * 16px   = 20 => line-height: 24/20 = 1.2
+ * 1.125em * 16px   = 18 => line-height: 24/18 = 1.3333
+ * 1em     * 16px   = 16 => line-height: 24/16 = 1.5
+ * 0.875em * 16px   = 14 => line-height: 24/14 = 1.7143
+ * 0.75em  * 16px   = 12 => line-height: 24/12 = 2
+ */
+/**
+  * Size and lineheight calculation for magicNumber 22
+  *
+  * 2.75em  * 16px   = 44 => line-height: 44/44 = 1
+  * 2.625em * 16px   = 42 => line-height: 44/42 = 1.0476
+  * 2.5em   * 16px   = 40 => line-height: 44/40 = 1.1
+  * 2.375em * 16px   = 38 => line-height: 44/38 = 1.1578
+  * 2.25em  * 16px   = 36 => line-height: 44/36 = 1.2222
+  * 2.125em * 16px   = 34 => line-height: 44/34 = 1.2941
+  * 2em     * 16px   = 32 => line-height: 44/32 = 1.375
+  * 1.875em * 16px   = 30 => line-height: 44/30 = 1.4667
+  * 1.75em  * 16px   = 28 => line-height: 44/28 = 1.5714
+  * 1.625em * 16px   = 26 => line-height: 44/26 = 1.6923
+  * 1.5em   * 16px   = 24 => line-height: 44/24 = 1.8333
+  * 1.375em * 16px   = 22 => line-height: 22/22 = 1
+  * 1.25em  * 16px   = 20 => line-height: 22/20 = 1.1
+  * 1.125em * 16px   = 18 => line-height: 22/18 = 1.2222
+  * 1em     * 16px   = 16 => line-height: 22/16 = 1.375
+  * 0.875em * 16px   = 14 => line-height: 22/14 = 1.5714
+  * 0.75em  * 16px   = 12 => line-height: 22/12 = 1.8333
+  */
+/**
+ * Magic number for vertical rythm
+ * @magicNumber = @fontSizeBody * @lineHeight
+ */
+/* 16px - 100%/1.5 */
+/*lineHeight blir då 1,5 ggr fontSizeBody*/
+/**
+* Sätter fontSize (em) och lineHeight i förhållande till den. När fontSize går över lineHeight går man in på ny multipel.
+* Exempel:
+* Låt @lineHeight: 1.5, @fontSize: 1.8
+* line-height: 1.5/1.8 * ceil(1.8/1.5) = 1.5/1.8 * 2 = 1.6667
+*/
+/*
+* Sätter font och fontsize
+*/
+/**
+ * Show grid.
+ */
+/* maxWidth: 1100px */
+/**
+* Ser till att inte padding och border ändrar en divs storlek.
+*/
+.boxsizing {
+  box-sizing: border-box;
+}
+/*
+* Fontvariabler
+*/
+body {
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 p {
   margin-left: 2%;
-  margin-right: 2%;
+  margin-right: 3%;
+  font-size: 1em;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+  font-size: 2.375em;
+  line-height: 1.26315789;
+  font-weight: normal;
+  margin-bottom: 23px;
+  margin-left: 1%;
+}
+h1 ~ h1,
+h1 ~ h2,
+h1 ~ h3,
+h1 ~ h4,
+h1 ~ h5,
+h1 ~ h6 {
+  margin-top: 48px;
+}
+h1 + h2 {
+  margin-top: 24px;
+}
+h4 {
+  font-size: 1.07em;
+  line-height: 1.40186916;
+}
+h4 + p {
+  margin-bottom: 0;
+}
+.next {
+  margin-right: 5%;
 }
 /** --------------------------------------------------------------
  *  Header
@@ -3061,8 +3257,12 @@ p {
 .site-logo-text,
 .navbar2,
 .profile {
+  display: inline;
   float: left;
-  width: 33%;
+  width: 31.25%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
+  box-sizing: border-box;
 }
 .site-logo-text {
   font-size: 2em;
@@ -3095,8 +3295,19 @@ p {
 }
 .footer-column {
   padding: 10px 0 0 2%;
-  width: 30%;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
   color: white;
+  border: 1px solid green;
+}
+.footer-column-wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 /** --------------------------------------------------------------
  *  Responsive design
@@ -3111,10 +3322,18 @@ p {
     width: 50%;
   }
   .navbar2 {
-    width: 40%;
+    display: inline;
+    float: left;
+    width: 39.58333333%;
+    margin-left: 1.04166667%;
+    margin-right: 1.04166667%;
   }
   .profile {
-    width: 10%;
+    display: inline;
+    float: left;
+    width: 6.25%;
+    margin-left: 1.04166667%;
+    margin-right: 1.04166667%;
   }
 }
 @media screen and (max-width: 650px) {
@@ -3124,7 +3343,9 @@ p {
 }
 @media screen and (max-width: 880px) {
   .footer-column {
-    width: 98%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     border-bottom: 1px solid #374d65;
   }
   .footer {
@@ -3140,10 +3361,18 @@ p {
     display: block;
   }
   .site-logo-text {
-    width: 90%;
+    display: inline;
+    float: left;
+    width: 89.58333333%;
+    margin-left: 1.04166667%;
+    margin-right: 1.04166667%;
   }
   .profile {
-    width: 10%;
+    display: inline;
+    float: left;
+    width: 6.25%;
+    margin-left: 1.04166667%;
+    margin-right: 1.04166667%;
   }
 }
 @media screen and (max-width: 350px) {

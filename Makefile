@@ -151,3 +151,12 @@ upgrade-responsive-menu:
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
+
+# target: upgrade-grid            - Upgrade LESS modules - grid-flex and grid-float
+.PHONY: upgrade-grid
+upgrade-responsive-menu:
+	@$(call HELPTEXT,$@)
+
+	# Grid
+	wget --quiet https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less/grid-flex.less -O $(LESS_MODULES)/grid-flex.less
+	wget --quiet https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less/grid-float.less -O $(LESS_MODULES)/grid-float.less
