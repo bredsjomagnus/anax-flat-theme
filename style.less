@@ -4,49 +4,54 @@
 @import url(modules.less);
 @maxButtonFontSize: 1.8em;
 @navbarItemBgColor: #878a9e;
-
 /*
 * Fontvariabler
 */
 @fontSizeH1: 2.375em;
 @fontSizeH4: 1.07em;
 @fontSizeP: 1em;
-
 @colorH1BorderBottom: #666;
 @borderSizeH1: 1px;
 
+body.route-grid {
+    .showGrid();
+}
 
 body {
     font-family: @fontFamilyBody;
 }
+
 p {
     margin-left: 2%;
     margin-right: 3%;
     .fontSize(@fontSizeP);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: @magicNumber;
     margin-bottom: @magicNumber;
     font-family: @fontFamilyHeadings;
 }
 
-
 h1 {
     .fontSize(@fontSizeH1);
     font-weight: normal;
-
     // border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
     margin-bottom: @magicNumber - @borderSizeH1;
-
     margin-left: 1%;
     // If header below h1, then assume larger margin top
+
     & ~ h1,
     & ~ h2,
     & ~ h3,
     & ~ h4,
     & ~ h5,
-    & ~ h6,
-     {
+    & ~ h6 {
         margin-top: @magicNumber * 2;
     }
     // Single margin when subheader follows directly
@@ -57,7 +62,6 @@ h1 {
 
 h4 {
     .fontSize(@fontSizeH4);
-    
     /*funkar inte*/
     // & + p {
     //     margin-bottom: 0;
@@ -65,23 +69,23 @@ h4 {
     // margin-bottom: 0;
 }
 
-.next{
+.next {
     margin-right: 5%;
 }
 /** --------------------------------------------------------------
  *  Header
  */
-.site-header{
+.site-header {
     height: 80px;
 }
 
-.logo-1{
+.logo-1 {
     display: none;
 }
 
-.site-logo-text,
 .navbar2,
-.profile {
+.profile,
+.site-logo-text {
     .column(4);
     .boxsizing();
 }
@@ -95,10 +99,9 @@ h4 {
     }
 }
 
-.rm-max.rm-navbar{
+.rm-max.rm-navbar {
     display: none;
 }
-
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -114,18 +117,17 @@ h4 {
     }
 }
 
-
 /** --------------------------------------------------------------
  *  Footer
  */
 .footer {
     background-color: @navbarItemBgColor;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     color: white;
     // display: block;
-
 }
-.footer-column{
+
+.footer-column {
     // float: left;
     padding: 10px 0 0 2%;
     .boxsizing();
@@ -134,27 +136,24 @@ h4 {
     color: white;
     // background-color: #50667e;
     border: 1px solid green;
-
-
 }
-.footer-column-wrapper{
+
+.footer-column-wrapper {
     .clearfix();
 }
 // .block.site-footer{
 //     border: 2px solid red;
 //     // width: 100%;
 // }
-
 /** --------------------------------------------------------------
  *  Responsive design
  */
- @media screen and (max-width: 970px) {
-    .flash-wrap img{
+@media screen and (max-width: 970px) {
+    .flash-wrap img {
         display: none;
     }
 }
-
- @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .site-logo-text {
         width: 50%;
     }
@@ -170,47 +169,48 @@ h4 {
     }
 }
 @media screen and (max-width: 650px) {
-   .sidebar {
-       width: 100%;
-        // width: @gridSystemWidth;
-   }
-}
-@media screen and (max-width: 880px) {
-   .footer-column{
+    .sidebar {
         width: 100%;
         // width: @gridSystemWidth;
-    //    width: 100%;
+    }
+}
+@media screen and (max-width: 880px) {
+    .footer-column {
+        width: 100%;
+        // width: @gridSystemWidth;
+        //    width: 100%;
         // margin-bottom: 1px;
         margin-left: 0;
         margin-right: 0;
         border-bottom: 1px solid #374d65;
+    }
 
-   }
-   .footer{
-       overflow-x: hidden;
-   }
+    .footer {
+        overflow-x: hidden;
+    }
 }
-
 @media screen and (max-width: 590px) {
-  .navbar2 {
-      display: none;
-      width: 0;
-  }
-  .rm-max.rm-navbar{
-      display: block;
-  }
-  .site-logo-text {
-    //   width: 90%;
-        .column(11);
-  }
-  .profile {
-    //   width: 10%;
-      .column(1);
-  }
-}
+    .navbar2 {
+        display: none;
+        width: 0;
+    }
 
+    .rm-max.rm-navbar {
+        display: block;
+    }
+
+    .site-logo-text {
+        //   width: 90%;
+        .column(11);
+    }
+
+    .profile {
+        //   width: 10%;
+        .column(1);
+    }
+}
 @media screen and (max-width: 350px) {
-  .site-logo-text {
-      display: none;
-  }
+    .site-logo-text {
+        display: none;
+    }
 }

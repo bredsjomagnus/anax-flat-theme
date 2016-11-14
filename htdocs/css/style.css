@@ -3188,18 +3188,30 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 * Sätter font och fontsize
 */
 /**
- * Show grid.
- */
-/* maxWidth: 1100px */
-/**
 * Ser till att inte padding och border ändrar en divs storlek.
 */
 .boxsizing {
   box-sizing: border-box;
 }
+/**
+ * Show grid.
+ */
+/* maxWidth: 1100px */
 /*
 * Fontvariabler
 */
+body.route-grid {
+  background: url(../img/grid/grid960x12x60x20.png) repeat-y fixed center center;
+  background-size: 100% auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+@media (min-width: 960px) {
+  body.route-grid {
+    background-size: 960px auto;
+  }
+}
 body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -3215,6 +3227,8 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
 }
 h1 {
@@ -3238,9 +3252,7 @@ h1 + h2 {
 h4 {
   font-size: 1.07em;
   line-height: 1.40186916;
-}
-h4 + p {
-  margin-bottom: 0;
+  /*funkar inte*/
 }
 .next {
   margin-right: 5%;
@@ -3254,9 +3266,9 @@ h4 + p {
 .logo-1 {
   display: none;
 }
-.site-logo-text,
 .navbar2,
-.profile {
+.profile,
+.site-logo-text {
   display: inline;
   float: left;
   width: 31.25%;
@@ -3290,7 +3302,7 @@ h4 + p {
  */
 .footer {
   background-color: #878a9e;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   color: white;
 }
 .footer-column {
