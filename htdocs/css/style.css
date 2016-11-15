@@ -3223,7 +3223,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Typographic mixins.
  */
 /**
- * Typographic sizes for horisontal rythm. 
+ * Typographic sizes for horisontal rythm.
  */
 /**
  * Magic number for vertical rythm
@@ -3281,9 +3281,18 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  */
 /* maxWidth: 1100px */
 /*
+* Funkar med känns inte helt rätt ändå
+*/
+/*
 * Fontvariabler
 */
-body.route-grid {
+.wrap-all {
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 0 0 63px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 63px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 63px -7px rgba(0, 0, 0, 0.75);
+}
+body.route-grid .wrap-all {
   background: url(../img/grid/grid960x12x60x20.png) repeat-y fixed center center;
   background-size: 100% auto;
   margin-left: auto;
@@ -3291,12 +3300,25 @@ body.route-grid {
   max-width: 960px;
 }
 @media (min-width: 960px) {
-  body.route-grid {
+  body.route-grid .wrap-all {
     background-size: 960px auto;
   }
 }
+body.route-typography .wrap-all {
+  background-size: 100% 24px;
+  background-image: -webkit-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -moz-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -ms-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -o-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+}
 body {
   font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+  background-color: #adab90;
+}
+.article {
+  padding-right: 5%;
+  margin-left: 30px;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -3320,8 +3342,7 @@ h1 {
   font-size: 2.375em;
   line-height: 1.26315789;
   font-weight: normal;
-  border-bottom: 1px solid #666;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 h1 ~ h1,
 h1 ~ h2,
@@ -3339,8 +3360,7 @@ h2 {
   line-height: 1.6;
   font-weight: normal;
   margin-top: 48px;
-  margin-bottom: 23px;
-  border-bottom: 1px solid #999;
+  margin-bottom: 24px;
 }
 h2 + h3 {
   margin-top: 24px;
@@ -3366,6 +3386,8 @@ h6 {
 p {
   margin-top: 24px;
   margin-bottom: 24px;
+  font-size: 1em;
+  line-height: 1.5;
 }
 small,
 .small,
@@ -3403,7 +3425,7 @@ sub {
   bottom: -0.25em;
 }
 blockquote {
-  border-left: 4px solid #eee;
+  border-left: 4px solid #adab90;
   padding-left: 1em;
   margin-left: 0;
   margin-bottom: 24px;
@@ -3413,7 +3435,7 @@ code,
 kbd,
 samp,
 .code {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-family: monospace;
 }
 code,
@@ -3421,18 +3443,14 @@ samp {
   border: 1px solid #ccc;
 }
 code {
-  background-color: #eee;
+  background-color: #dbdbdb;
+  color: #d04747;
 }
 pre,
 div.code,
 pre code {
-  font-size: 1.25em;
-  line-height: 1.6;
-  white-space: pre;
-}
-pre {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  font-size: 1.1em;
+  line-height: 1.518;
 }
 pre code {
   display: block;
@@ -3442,12 +3460,78 @@ div.code,
 pre code {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  margin-top: 23px;
-  margin-bottom: 23px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
   padding-left: 0.5em;
+  box-sizing: border-box;
   background-color: #eee;
+  color: #d04747;
+}
+article table,
+.table,
+.table1,
+.table2 {
+  margin-top: -0.1em;
+  margin-bottom: 24px;
+}
+table.full-width,
+article .table,
+.table,
+.table2 {
+  width: 100%;
+}
+article table,
+.table,
+.table2 {
+  border-collapse: collapse;
+}
+article table caption,
+.table caption,
+.table2 caption {
+  font-size: 0.875em;
+  line-height: 1.71428571;
+  text-align: left;
+  font-style: italic;
+}
+article table thead,
+.table thead,
+.table2 thead {
+  box-shadow: 0 1px 0 #aaa;
+}
+article table th,
+.table th,
+.table2 th {
+  vertical-align: bottom;
+  font-weight: bold;
+  text-align: left;
+}
+article table th,
+.table th,
+.table2 th,
+article table td,
+.table td,
+.table2 td {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 3px;
+  padding-bottom: 2.9px;
+  box-sizing: border-box;
+}
+article table tr,
+.table tr,
+.table2 tr {
+  box-shadow: 0 1px 0 #ccc;
+}
+article table tr:hover,
+.table tr:hover,
+.table2 tr:hover {
+  color: #000;
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 0 #666;
+}
+table.striped tbody tr:nth-child(even) td,
+table.striped tbody tr.even td {
+  background-color: #a8a8a8;
 }
 .next {
   margin-right: 5%;

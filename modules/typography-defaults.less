@@ -24,8 +24,9 @@
         .fontSize(@fontSizeH1);
         font-weight: normal;
 
-        border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
-        margin-bottom: @magicNumber - @borderSizeH1;
+        // border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+        // margin-bottom: @magicNumber - @borderSizeH1;
+        margin-bottom: @magicNumber;
 
         // If header below h1, then assume larger margin top
         & ~ h1,
@@ -49,9 +50,10 @@
         font-weight: normal;
 
         margin-top: @magicNumber * 2;
-        margin-bottom: @magicNumber - @borderSizeH2;
+        // margin-bottom: @magicNumber - @borderSizeH2;
+        margin-bottom: @magicNumber;
 
-        border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
+        // border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
 
         & + h3 {
             margin-top: @magicNumber;
@@ -85,19 +87,21 @@
 @colorTypographyMark: #000;
 @bgColorTypographyMark:  #ffff99;
 
-@colorBlockquoteBorder: #eee;
+// @colorBlockquoteBorder: #eee;
+@colorBlockquoteBorder: @bodyColor;
 @sizeBlockquoteBorder: 4px;
 
 .typographyTextElements() {
     p {
         margin-top: @magicNumber;
         margin-bottom: @magicNumber;
+        .fontSize(1em);
     }
 
     small,
     .small,
     .smaller {
-        font-size: @fontSizeSmall; 
+        font-size: @fontSizeSmall;
     }
 
     strong,
@@ -151,9 +155,11 @@
  * Display source code.
  */
 @borderColorCodeInline: #ccc;
-@bgColorCodeInline:     #eee;
+// @bgColorCodeInline:     #eee;
+@bgColorCodeInline:     @wrapAllColor;
 @bgColorCodeBlock:      #eee;
 @colorCodeBlockBorder:  #ccc;
+@codeColor:             #d04747;
 @borderSizeCodeblock:   1px;
 
 .typographyCodeElements() {
@@ -173,19 +179,21 @@
 
     code {
         background-color: @bgColorCodeInline;
+        color: @codeColor;
     }
 
     pre,
     div.code,
     pre code {
         font-size: @fontSizeCodeBlock;
+        // font-size: 16px;
         line-height: @lineHeightCodeBlock;
-        white-space: pre;
+        // white-space: pre;
     }
 
     pre {
-        margin-top: @magicNumber;
-        margin-bottom: @magicNumber;
+        // margin-top: 0.5em;
+        // margin-bottom: @magicNumber;
     }
 
     pre code {
@@ -198,14 +206,21 @@
         border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
         border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
 
-        margin-top:    @magicNumber - @borderSizeCodeblock;
-        margin-bottom: @magicNumber - @borderSizeCodeblock;
+        // margin-top:    @magicNumber/2;
+        // margin-bottom: @magicNumber/2;
+        // margin-bottom: 0;
 
-        padding-top:    @magicNumber / 2;
-        padding-bottom: @magicNumber / 2;
+        padding-top:    0.7em;
+        padding-bottom: 0.7em;
         padding-left: 0.5em;
 
+        .boxsizing();
+        // line-height: 1;
+
         background-color: @bgColorCodeBlock;
+        color: @codeColor;
+        // color: green;
+
     }
 }
 
@@ -217,13 +232,13 @@
 .typographyListElements() {
     //ul,ol{margin:0.6875em 1.5em 1.375em 0;padding-left:1.5em;}
 
-    ul, 
+    ul,
     ol {
         margin-top:    @magicNumber;
         margin-bottom: @magicNumber;
         padding-left: 1.5em;
 
-        p { 
+        p {
             margin-top:    @magicNumber / 2;
             margin-bottom: @magicNumber / 2;
         }
@@ -254,20 +269,20 @@
                 clear: left;
                 float: left;
                 width: @margin
-            } 
+            }
 
             dd {
                 margin-left: @margin + 1em;
                 display:block;
-            } 
+            }
         }
     }
 
-    dt { 
+    dt {
         //font-weight: bold;
     }
 
-    dd { 
+    dd {
         margin-left: 1.5em;
     }
 }
@@ -281,7 +296,7 @@
 @colorTableHeaderBorder:    #aaa;
 @sizeTableHeaderBorder:     2px;
 
-@bgColorTableStripe:        #fafafa;
+@bgColorTableStripe:        #a8a8a8;
 @colorTableRowBorder:       #ccc;
 
 @colorTableRowHover:        #000;
@@ -293,11 +308,12 @@
 
     }
 
-    article table, 
+    article table,
     .table,
     .table1,
     .table2 {
-        margin-top:    @magicNumber;
+        // margin-top:    @magicNumber;
+        margin-top:    -0.1em;
         margin-bottom: @magicNumber;
     }
 
@@ -311,16 +327,16 @@
     // A more styled table layout
     article table,
     .table,
-    .table2 { 
+    .table2 {
         border-collapse: collapse;
 
-        caption { 
+        caption {
             .fontSize(@fontSizeSmall);
             text-align: left;
             font-style: italic;
         }
 
-        thead { 
+        thead {
             box-shadow:  0 1px 0 @colorTableHeaderBorder;
         }
 
@@ -332,7 +348,13 @@
 
         th,
         td {
-            padding: @magicNumber / 4;
+            // padding: @magicNumber / 4;
+            padding-left: @magicNumber/2;
+            padding-right: @magicNumber/2;
+            padding-top: @magicNumber/8;
+            padding-bottom: @magicNumber/8 - 0.1em;
+            .boxsizing();
+            // border-bottom: 1px solid gray;
         }
 
         tr {
@@ -346,7 +368,7 @@
         }
 
         tfoot {
-            
+
         }
     }
 
@@ -375,7 +397,7 @@
         border: 0;
         height: 1px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
- 
+
         margin-top: 1.5 * @magicNumber - 1px;
         margin-bottom: 1.5 * @magicNumber;
 
