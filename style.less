@@ -7,11 +7,11 @@
 /*
 * Fontvariabler
 */
-@fontSizeH1: 2.375em;
-@fontSizeH4: 1.07em;
-@fontSizeP: 1em;
-@colorH1BorderBottom: #666;
-@borderSizeH1: 1px;
+// @fontSizeH1: 2.375em;
+// @fontSizeH4: 1.07em;
+// @fontSizeP: 1em;
+// @colorH1BorderBottom: #666;
+// @borderSizeH1: 1px;
 
 body.route-grid {
     .showGrid();
@@ -21,53 +21,56 @@ body {
     font-family: @fontFamilyBody;
 }
 
-p {
-    margin-left: 2%;
-    margin-right: 3%;
-    .fontSize(@fontSizeP);
-}
+.typographyHeadings();
+.typographyTextElements();
+.typographyCodeElements();
+// p {
+//     margin-left: 2%;
+//     margin-right: 3%;
+//     .fontSize(@fontSizeP);
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: @magicNumber;
-    margin-bottom: @magicNumber;
-    font-family: @fontFamilyHeadings;
-}
-
-h1 {
-    .fontSize(@fontSizeH1);
-    font-weight: normal;
-    // border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
-    margin-bottom: @magicNumber - @borderSizeH1;
-    margin-left: 1%;
-    // If header below h1, then assume larger margin top
-
-    & ~ h1,
-    & ~ h2,
-    & ~ h3,
-    & ~ h4,
-    & ~ h5,
-    & ~ h6 {
-        margin-top: @magicNumber * 2;
-    }
-    // Single margin when subheader follows directly
-    & + h2 {
-        margin-top: @magicNumber;
-    }
-}
-
-h4 {
-    .fontSize(@fontSizeH4);
-    /*funkar inte*/
-    // & + p {
-    //     margin-bottom: 0;
-    // }
-    // margin-bottom: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     margin-top: @magicNumber;
+//     margin-bottom: @magicNumber;
+//     font-family: @fontFamilyHeadings;
+// }
+//
+// h1 {
+//     .fontSize(@fontSizeH1);
+//     font-weight: normal;
+//     // border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+//     margin-bottom: @magicNumber - @borderSizeH1;
+//     margin-left: 1%;
+//     // If header below h1, then assume larger margin top
+//
+//     & ~ h1,
+//     & ~ h2,
+//     & ~ h3,
+//     & ~ h4,
+//     & ~ h5,
+//     & ~ h6 {
+//         margin-top: @magicNumber * 2;
+//     }
+//     // Single margin when subheader follows directly
+//     & + h2 {
+//         margin-top: @magicNumber;
+//     }
+// }
+//
+// h4 {
+//     .fontSize(@fontSizeH4);
+//     /*funkar inte*/
+//     // & + p {
+//     //     margin-bottom: 0;
+//     // }
+//     // margin-bottom: 0;
+// }
 
 .next {
     margin-right: 5%;
