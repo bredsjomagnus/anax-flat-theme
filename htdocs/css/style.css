@@ -3306,10 +3306,10 @@ body.route-grid .wrap-all {
 }
 body.route-typography .wrap-all {
   background-size: 100% 24px;
-  background-image: -webkit-linear-gradient(gray 0%, transparent 7%, transparent 100%);
-  background-image: -moz-linear-gradient(gray 0%, transparent 7%, transparent 100%);
-  background-image: -ms-linear-gradient(gray 0%, transparent 7%, transparent 100%);
-  background-image: -o-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -webkit-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
+  background-image: -moz-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
+  background-image: -ms-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
+  background-image: -o-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
 }
 body {
   font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
@@ -3528,6 +3528,10 @@ article table tr:hover,
   color: #000;
   background-color: #f6f6f6;
   box-shadow: 0 1px 0 #666;
+}
+.table2.striped thead {
+  background-color: black;
+  color: white;
 }
 table.striped tbody tr:nth-child(even) td,
 table.striped tbody tr.even td {
