@@ -37,6 +37,7 @@
         & ~ h6,
          {
             margin-top: @magicNumber * 2;
+            margin-bottom: @magicNumber;
         }
 
         // Single margin when subheader follows directly
@@ -67,7 +68,11 @@
 
     h4 {
         .fontSize(@fontSizeH4);
-        font-weight: normal;
+        font-weight: bold;
+
+        // & + p {
+        //     margin-bottom: -@magicNumber;
+        // }
     }
 
     h5 {
@@ -93,7 +98,7 @@
 
 .typographyTextElements() {
     p {
-        margin-top: @magicNumber;
+        // margin-top: @magicNumber;
         margin-bottom: @magicNumber;
         .fontSize(1em);
     }
@@ -285,6 +290,9 @@
     dd {
         margin-left: 1.5em;
     }
+    li {
+        margin-bottom: @magicNumber/4;
+    }
 }
 
 
@@ -387,7 +395,7 @@
             }
 
 
-        
+
         }
     }
 }

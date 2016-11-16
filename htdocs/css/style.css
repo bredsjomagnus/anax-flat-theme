@@ -445,9 +445,6 @@ body {
 .wrap-all {
   margin-right: auto;
   margin-left: auto;
-  /*Eget tillägg*/
-  margin-top: 0;
-  margin-bottom: 0;
   max-width: 960px;
 }
 .footer-column {
@@ -619,6 +616,10 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-default li {
   display: inline-block;
 }
+.rm-default li:hover {
+  color: inherit;
+  background-color: #535b3f;
+}
 .rm-default li li {
   display: block;
   min-width: 10em;
@@ -648,7 +649,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #878a9e;
+  background-color: #737e57;
 }
 .rm-desktop li {
   position: relative;
@@ -659,7 +660,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: #878a9e;
+  background-color: #737e57;
 }
 .rm-desktop li a:hover {
   color: inherit;
@@ -3283,9 +3284,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /*
 * Funkar med känns inte helt rätt ändå
 */
-/*
-* Fontvariabler
-*/
 .wrap-all {
   background-color: #dbdbdb;
   -webkit-box-shadow: 0 0 63px -7px rgba(0, 0, 0, 0.75);
@@ -3311,9 +3309,19 @@ body.route-typography .wrap-all {
   background-image: -ms-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
   background-image: -o-linear-gradient(#b3b3b3 0%, transparent 7%, transparent 100%);
 }
+body.route-typography .footer {
+  background-size: 100% 24px;
+  background-image: -webkit-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -moz-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -ms-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+  background-image: -o-linear-gradient(gray 0%, transparent 7%, transparent 100%);
+}
 body {
   font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
   background-color: #adab90;
+}
+.flash-wrap .content {
+  text-align: center;
 }
 .article {
   padding-right: 5%;
@@ -3351,6 +3359,7 @@ h1 ~ h4,
 h1 ~ h5,
 h1 ~ h6 {
   margin-top: 48px;
+  margin-bottom: 24px;
 }
 h1 + h2 {
   margin-top: 24px;
@@ -3373,7 +3382,7 @@ h3 {
 h4 {
   font-size: 1.25em;
   line-height: 1.2;
-  font-weight: normal;
+  font-weight: bold;
 }
 h5 {
   font-size: 1em;
@@ -3384,7 +3393,6 @@ h6 {
   line-height: 1.71428571;
 }
 p {
-  margin-top: 24px;
   margin-bottom: 24px;
   font-size: 1em;
   line-height: 1.5;
@@ -3537,6 +3545,65 @@ table.striped tbody tr:nth-child(even) td,
 table.striped tbody tr.even td {
   background-color: #a8a8a8;
 }
+ul,
+ol {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-left: 1.5em;
+}
+ul p,
+ol p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+dl {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+dl.horizontal dt {
+  clear: left;
+  float: left;
+  width: 7em;
+}
+dl.horizontal dd {
+  margin-left: 8em;
+  display: block;
+}
+dd {
+  margin-left: 1.5em;
+}
+li {
+  margin-bottom: 6px;
+}
+hr {
+  position: relative;
+  top: -2px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-top: 35px;
+  margin-bottom: 36px;
+}
+hr:after {
+  content: "§";
+  position: relative;
+  top: -0.7em;
+  left: 50%;
+  padding: 0 0.25em;
+  background-color: #fff;
+}
 .next {
   margin-right: 5%;
 }
@@ -3545,19 +3612,30 @@ table.striped tbody tr.even td {
  */
 .site-header {
   height: 80px;
+  background-color: #737e57;
+  box-sizing: border-box;
+  width: 960px;
+  margin-left: 0.1px;
 }
 .logo-1 {
   display: none;
 }
-.navbar2,
 .profile,
 .site-logo-text {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 39.58333333%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
   box-sizing: border-box;
+}
+.navbar2 {
+  margin-top: 15px;
+  display: inline;
+  float: left;
+  width: 47.91666667%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
 }
 .site-logo-text {
   font-size: 2em;
@@ -3579,12 +3657,17 @@ table.striped tbody tr.even td {
 }
 .site-logo-text-icon img {
   vertical-align: bottom;
+  margin-top: 15px;
+}
+.after-main p {
+  font-style: italic;
+  text-align: center;
 }
 /** --------------------------------------------------------------
  *  Footer
  */
 .footer {
-  background-color: #878a9e;
+  background-color: #4c4d4b;
   padding: 10px 0;
   color: white;
 }
@@ -3597,7 +3680,6 @@ table.striped tbody tr.even td {
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
   color: white;
-  border: 1px solid green;
 }
 .footer-column-wrapper::after {
   content: "";
@@ -3607,22 +3689,36 @@ table.striped tbody tr.even td {
 /** --------------------------------------------------------------
  *  Responsive design
  */
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 960px) {
   .flash-wrap img {
     display: none;
   }
-}
-@media screen and (max-width: 900px) {
-  .site-logo-text {
-    width: 50%;
-  }
   .navbar2 {
+    display: none;
+    width: 0;
+  }
+  .profile {
     display: inline;
     float: left;
-    width: 39.58333333%;
+    width: 6.25%;
     margin-left: 1.04166667%;
     margin-right: 1.04166667%;
   }
+  .site-header {
+    width: 100%;
+  }
+  .site-logo-text {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin-left: 1.04166667%;
+    margin-right: 1.04166667%;
+  }
+  .rm-max.rm-navbar {
+    display: block;
+  }
+}
+@media screen and (max-width: 900px) {
   .profile {
     display: inline;
     float: left;
@@ -3647,21 +3743,7 @@ table.striped tbody tr.even td {
     overflow-x: hidden;
   }
 }
-@media screen and (max-width: 590px) {
-  .navbar2 {
-    display: none;
-    width: 0;
-  }
-  .rm-max.rm-navbar {
-    display: block;
-  }
-  .site-logo-text {
-    display: inline;
-    float: left;
-    width: 89.58333333%;
-    margin-left: 1.04166667%;
-    margin-right: 1.04166667%;
-  }
+@media screen and (max-width: 550px) {
   .profile {
     display: inline;
     float: left;
@@ -3670,7 +3752,7 @@ table.striped tbody tr.even td {
     margin-right: 1.04166667%;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 319px) {
   .site-logo-text {
     display: none;
   }
