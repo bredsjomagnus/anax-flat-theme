@@ -1,5 +1,9 @@
 body{
     overflow-x: hidden;
+    margin: 0 auto;
+}
+html {
+    overflow-y: scroll;
 }
 .wrap-all {
   	.container();
@@ -87,4 +91,73 @@ body{
 .site-header {
     position: relative;
   	.row();
+}
+
+.rm-max.rm-navbar {
+    display: none;
+}
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+@media screen and (max-width: 960px) {
+    .flash-wrap img {
+        display: none;
+    }
+    .navbar2 {
+        display: none;
+        width: 0;
+    }
+    .profile {
+        //   width: 10%;
+        .column(1);
+    }
+    .site-header{
+        width: 100%;
+    }
+    .site-logo-text {
+        .column(4);
+    }
+    .rm-max.rm-navbar {
+        display: block;
+    }
+}
+@media screen and (max-width: 900px) {
+    .profile {
+        // width: 10%;
+        .column(1);
+    }
+}
+@media screen and (max-width: 650px) {
+    .sidebar {
+        width: 100%;
+        // width: @gridSystemWidth;
+    }
+}
+@media screen and (max-width: 880px) {
+    .footer-column {
+        width: 100%;
+        // width: @gridSystemWidth;
+        //    width: 100%;
+        // margin-bottom: 1px;
+        margin-left: 0;
+        margin-right: 0;
+        border-bottom: 1px solid #374d65;
+    }
+
+    .footer {
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width: 550px) {
+
+    .profile {
+        //   width: 10%;
+        .column(1);
+    }
+}
+@media screen and (max-width: 319px) {
+    .site-logo-text {
+        display: none;
+    }
 }

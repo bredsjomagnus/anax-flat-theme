@@ -1,0 +1,297 @@
+// Låt modules.less vara din base.less. Klar med den biten.
+// Lägg alla nya stylesheets parallellt med din style.less, i samma katalog.
+// Överst i alla stylesheets importerar du modules.less. Sen är det bara att anpassa.
+// Om du känner att vissa features delas av alla/några teman, så kan du skapa, tex, en modules/commons.less där du delar konstruktioner mellan alla stylesheets. Eller så kan du även skapa varianter av modules/specifics.less som du enbart inkluderar i någon av stylesheeten (och inte via modules.less).
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+.typographyHeadings();
+.typographyTextElements();
+.typographyCodeElements();
+.typographyTableElements();
+.typographyListElements();
+.typographyOtherElements();
+
+@maxButtonFontSize: 1.8em;
+@navbarItemBgColor: #535b3f;
+@wrapAllColor: #dbdbdb;
+@bodyColor: #adab90;
+@headerColor: #737e57;
+@footerColor: #4c4d4b;
+
+.wrap-all {
+    background-color: @wrapAllColor;
+    -webkit-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
+    box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
+}
+//
+// body.route-grid {
+//     .wrap-all {
+//         .showGrid();
+//     }
+// }
+//
+// body.route-typography {
+//     .wrap-all {
+//         .showTypoGrid(#b3b3b3);
+//     }
+//     .footer{
+//         .showTypoGrid(gray);
+//     }
+// }
+//
+
+body {
+    font-family: @fontFamilyBody;
+    background-color: @bodyColor;
+}
+//
+
+.flash-wrap .content {
+    text-align: center;
+}
+/*Jag kommer åt li i navbaren här */
+.rm-desktop {
+    li {
+        margin: 1em 0 0 0.3em;
+        border: 1px dotted @submenuBgColor;
+        // Hover over a menu item
+        &:hover {
+            color: white;
+            background-color: @submenuBgColor;
+        }
+
+        a {
+            background-color: @headerColor;
+        }
+    }
+}
+.next{
+    margin-right: 10%;
+}
+main p, h4 {
+    margin-right: 10%;
+    margin-left: 10px;
+}
+.table, .table2, .table2.stiped{
+    width: 90%;
+}
+div.code, pre code{
+    width: 90%;
+    margin-right: 20px;
+}
+.footer{
+    background-color: @footerColor;
+    color: white;
+    margin: 1em 0 2em 0;
+    height: 250px;
+}
+.after-main .content p{
+    text-align: center;
+}
+// .article{
+//
+//     padding-right: 5%;
+//     margin-left: 30px;
+//     .boxsizing();
+//
+// }
+//
+// p {
+//     margin-left: 2%;
+//     margin-right: 3%;
+//     .fontSize(@fontSizeP);
+// }
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     margin-top: @magicNumber;
+//     margin-bottom: @magicNumber;
+//     font-family: @fontFamilyHeadings;
+// }
+//
+// h1 {
+//     .fontSize(@fontSizeH1);
+//     font-weight: normal;
+//     // border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+//     margin-bottom: @magicNumber - @borderSizeH1;
+//     margin-left: 1%;
+//     // If header below h1, then assume larger margin top
+//
+//     & ~ h1,
+//     & ~ h2,
+//     & ~ h3,
+//     & ~ h4,
+//     & ~ h5,
+//     & ~ h6 {
+//         margin-top: @magicNumber * 2;
+//     }
+//     // Single margin when subheader follows directly
+//     & + h2 {
+//         margin-top: @magicNumber;
+//     }
+// }
+//
+// h4 {
+//     .fontSize(@fontSizeH4);
+//     /*funkar inte*/
+//     // & + p {
+//     //     margin-bottom: 0;
+//     // }
+//     // margin-bottom: 0;
+// }
+// .next {
+//     margin-right: 5%;
+// }
+// /** --------------------------------------------------------------
+//  *  Header
+//  */
+
+.site-header {
+    height: 80px;
+    background-color: @headerColor;
+    .boxsizing();
+    width: 960px;
+    margin-left: 0.1px;
+}
+//
+// .logo-1 {
+//     display: none;
+// }
+//
+// .profile,
+// .site-logo-text {
+//     .column(5);
+//     .boxsizing();
+// }
+//
+// .navbar2{
+//     margin-top: 15px;
+//     .column(7);
+// }
+//
+// .site-logo-text {
+//     font-size: 2em;
+//
+//     a {
+//         text-decoration: none;
+//         color: black;
+//     }
+// }
+//
+// .rm-max.rm-navbar {
+//     display: none;
+// }
+// /** --------------------------------------------------------------
+//  *  Logo images
+//  */
+// .logo-1 {
+//     position: absolute;
+//     top: 70px;
+//     left: -140px;
+// }
+//
+// .site-logo-text-icon {
+//     img {
+//         vertical-align: bottom;
+//         margin-top: 15px;
+//     }
+// }
+//
+// .after-main p{
+//     font-style: italic;
+//     text-align: center;
+// }
+//
+// /** --------------------------------------------------------------
+//  *  Footer
+//  */
+// rm-navbar
+//
+// .footer-column {
+//     // float: left;
+// padding: 10px 0 0 2%;
+// .boxsizing();
+//     // width: 28%;
+// .column(4);
+// color: white;
+//     // background-color: #50667e;
+//     // border: 1px solid green;
+// }
+//
+// .footer-column-wrapper {
+//     .clearfix();
+// }
+// // .block.site-footer{
+// //     border: 2px solid red;
+// //     // width: 100%;
+// // }
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+// @media screen and (max-width: 960px) {
+//     .flash-wrap img {
+//         display: none;
+//     }
+//     .navbar2 {
+//         display: none;
+//         width: 0;
+//     }
+//     .profile {
+//         //   width: 10%;
+//         .column(1);
+//     }
+//     .site-header{
+//         width: 100%;
+//     }
+//     .site-logo-text {
+//         .column(4);
+//     }
+//     .rm-max.rm-navbar {
+//         display: block;
+//     }
+// }
+// @media screen and (max-width: 900px) {
+//     .profile {
+//         // width: 10%;
+//         .column(1);
+//     }
+// }
+// @media screen and (max-width: 650px) {
+//     .sidebar {
+//         width: 100%;
+//         // width: @gridSystemWidth;
+//     }
+// }
+// @media screen and (max-width: 880px) {
+//     .footer-column {
+//         width: 100%;
+//         // width: @gridSystemWidth;
+//         //    width: 100%;
+//         // margin-bottom: 1px;
+//         margin-left: 0;
+//         margin-right: 0;
+//         border-bottom: 1px solid #374d65;
+//     }
+//
+//     .footer {
+//         overflow-x: hidden;
+//     }
+// }
+// @media screen and (max-width: 550px) {
+//
+//     .profile {
+//         //   width: 10%;
+//         .column(1);
+//     }
+// }
+// @media screen and (max-width: 319px) {
+//     .site-logo-text {
+//         display: none;
+//     }
+// }

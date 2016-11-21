@@ -1,0 +1,60 @@
+// Låt modules.less vara din base.less. Klar med den biten.
+// Lägg alla nya stylesheets parallellt med din style.less, i samma katalog.
+// Överst i alla stylesheets importerar du modules.less. Sen är det bara att anpassa.
+// Om du känner att vissa features delas av alla/några teman, så kan du skapa, tex, en modules/commons.less där du delar konstruktioner mellan alla stylesheets. Eller så kan du även skapa varianter av modules/specifics.less som du enbart inkluderar i någon av stylesheeten (och inte via modules.less).
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme:300');
+@maxButtonFontSize: 1.8em;
+@navbarItemBgColor: #535b3f;
+@wrapAllColor: #dbdbdb;
+@bodyColor: #adab90;
+@headerColor: #737e57;
+@footerColor: lightgray;
+@submenuBgColor: lightgray;
+@headerColor: lightgray;
+@codeColor: #5e5e5e;
+@magicNumber: 32px;
+
+.typographyHeadings();
+.typographyTextElements();
+.typographyCodeElements();
+.typographyTableElements();
+.typographyListElements();
+.typographyOtherElements();
+
+.footer{
+    background-color: @footerColor;
+    color: gray;
+    margin: 1em 0 2em 0;
+    height: 250px;
+}
+
+.rm-desktop {
+    li {
+        margin: 1em 0 0.3 0.3em;
+        border: 1px dotted @submenuBgColor;
+        // Hover over a menu item
+        &:hover {
+            color: gray;
+            background-color: @submenuBgColor;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+li, p, a {
+    font-family: 'BioRhyme', serif;
+}
+
+pre code {
+    color: @codeColor;
+}
+code {
+    color: @codeColor;
+}
