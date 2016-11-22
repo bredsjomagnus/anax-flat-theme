@@ -22,9 +22,7 @@
 
 .wrap-all {
     background-color: @wrapAllColor;
-    -webkit-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
-    box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
+    .shadowBox();
 }
 //
 // body.route-grid {
@@ -47,11 +45,11 @@ body {
     font-family: @fontFamilyBody;
     background-color: @bodyColor;
 }
-//
-
+// innehåller i flashen
 .flash-wrap .content {
     text-align: center;
 }
+
 /*Jag kommer åt li i navbaren här */
 .rm-desktop {
     li {
@@ -88,6 +86,7 @@ div.code, pre code{
     margin: 1em 0 2em 0;
     height: 250px;
 }
+// byline
 .after-main .content p{
     text-align: center;
 }
@@ -156,7 +155,7 @@ div.code, pre code{
     height: 80px;
     background-color: @headerColor;
     .boxsizing();
-    width: 960px;
+    width: 100%;
     margin-left: 0.1px;
 }
 //

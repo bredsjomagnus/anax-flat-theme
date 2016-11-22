@@ -1,0 +1,95 @@
+// Låt modules.less vara din base.less. Klar med den biten.
+// Lägg alla nya stylesheets parallellt med din style.less, i samma katalog.
+// Överst i alla stylesheets importerar du modules.less. Sen är det bara att anpassa.
+// Om du känner att vissa features delas av alla/några teman, så kan du skapa, tex, en modules/commons.less där du delar konstruktioner mellan alla stylesheets. Eller så kan du även skapa varianter av modules/specifics.less som du enbart inkluderar i någon av stylesheeten (och inte via modules.less).
+/**
+* Anax Flat theme.
+*/
+
+@import url(light.less);
+@import url(common.less); // ingår modules och lite till
+@darkColor: #c76d1b;
+@wrapAllColor: #e2e2e2;
+@lightColor: #c39061;
+@submenuBgColor: @darkColor;
+@menubuttonColor: @lightColor;
+@menubuttonborderColor: #60340b; // @headerColor: #9c6431;
+@headerColor: #936a46;
+@gradientColor: #b39057;
+@codeColor: #c73a1b;
+@magicNumber: 24px;
+@tablestripedHead: @headerColor;
+@bgColorTableStripe: @lightColor;
+@linkColor: #cc7c34;
+@linkhoverColor: #FFF;
+
+
+.flash-wrap img {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: @darkColor;
+}
+
+.after-main .content p {
+    color: @lightColor;
+}
+
+a:visited {
+    color: @darkColor;
+}
+
+a {
+    color: #c73a1b;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.wrap-all {
+    background-color: @wrapAllColor;
+}
+
+.flash-wrap {
+    margin: 0 0 0 2em;
+}
+
+html {
+    background: @gradientColor;
+    background: -moz-linear-gradient(45deg, @gradientColor 0%, rgba(226,227,220,1) 79%, rgba(226,227,220,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, @gradientColor), color-stop(79%, rgba(226,227,220,1)), color-stop(100%, rgba(226,227,220,1)));
+    background: -webkit-linear-gradient(45deg, @gradientColor 0%, rgba(226,227,220,1) 79%, rgba(226,227,220,1) 100%);
+    background: -o-linear-gradient(45deg, @gradientColor 0%, rgba(226,227,220,1) 79%, rgba(226,227,220,1) 100%);
+    background: -ms-linear-gradient(45deg, @gradientColor 0%, rgba(226,227,220,1) 79%, rgba(226,227,220,1) 100%);
+    background: linear-gradient(45deg, @gradientColor 0%, rgba(226,227,220,1) 79%, rgba(226,227,220,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '@gradientColor', endColorstr='#e2e3dc', GradientType=1 );
+}
+/*
+* Sidhuvudet
+*/
+.site-header {
+    height: 150px;
+    background-color: @headerColor;
+    .boxsizing();
+    width: 100%;
+    margin-left: 0.1px;
+}
+// Next och previouslänkarna
+
+
+
+
+pre code {
+    color: @codeColor;
+}
+
+code {
+    color: @codeColor;
+}

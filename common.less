@@ -1,0 +1,62 @@
+
+@import url(modules.less);
+@submenuBgColor: inherit;
+@linkhoverColor: inherit;
+@linkColor: inherit;
+@menubuttonborderColor: inherit;
+
+.typographyHeadings();
+.typographyTextElements();
+.typographyCodeElements();
+.typographyTableElements();
+.typographyListElements();
+.typographyOtherElements();
+
+.table,
+.table2,
+.table2.stiped {
+    width: 90%;
+}
+
+div.code,
+pre code {
+    width: 90%;
+    margin-right: 20px;
+}
+
+h4,
+main p {
+    margin-right: 10%;
+    margin-left: 10px;
+}
+
+.table,
+.table2,
+.table2.stiped {
+    width: 90%;
+}
+.next {
+    margin-right: 10%;
+}
+
+/*Jag kommer åt li i navbaren här */
+.rm-desktop {
+    li {
+        margin: 4.5em 0 0 0.8em;
+        border: 1px dotted @submenuBgColor;
+        // Hover over a menu item
+        &:hover {
+            color: @linkhoverColor;
+            background-color: @submenuBgColor;
+            text-decoration: none;
+        }
+
+        a {
+            background-color: @linkColor;
+            border: 2px solid @menubuttonborderColor;
+            -webkit-box-shadow: 0 0 5px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0 0 5px -1px rgba(0,0,0,0.75);
+            box-shadow: 0 0 5px -1px rgba(0,0,0,0.75);
+        }
+    }
+}

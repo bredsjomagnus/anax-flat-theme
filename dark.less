@@ -1,0 +1,50 @@
+// Låt modules.less vara din base.less. Klar med den biten.
+// Lägg alla nya stylesheets parallellt med din style.less, i samma katalog.
+// Överst i alla stylesheets importerar du modules.less. Sen är det bara att anpassa.
+// Om du känner att vissa features delas av alla/några teman, så kan du skapa, tex, en modules/commons.less där du delar konstruktioner mellan alla stylesheets. Eller så kan du även skapa varianter av modules/specifics.less som du enbart inkluderar i någon av stylesheeten (och inte via modules.less).
+/**
+* Anax Flat theme.
+*/
+@import url(common.less); // ingår modules och lite till
+@import url( 'https://fonts.googleapis.com/css?family=Oswald');
+@import url( 'https://fonts.googleapis.com/css?family=Playfair+Display');
+@wrapAllColor: #222222;
+@bodyColor: #000;
+@submenuBgColor: #717171;
+@linkhoverColor: lightgray;
+// @linkColor: white;
+
+body {
+    background: url("../img/black_background_pattern_light_texture_55291_1920x1080.jpg") no-repeat center center fixed;
+}
+
+.wrap-all {
+    background-color: @wrapAllColor;
+    color: white;
+    .insetShadowBox();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+a,
+li,
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    color: white;
+    &:visited{
+        color: lightblue;
+    }
+    &:hover{
+        color: red;
+    }
+}
