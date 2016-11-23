@@ -1,0 +1,44 @@
+// Låt modules.less vara din base.less. Klar med den biten.
+// Lägg alla nya stylesheets parallellt med din style.less, i samma katalog.
+// Överst i alla stylesheets importerar du modules.less. Sen är det bara att anpassa.
+// Om du känner att vissa features delas av alla/några teman, så kan du skapa, tex, en modules/commons.less där du delar konstruktioner mellan alla stylesheets. Eller så kan du även skapa varianter av modules/specifics.less som du enbart inkluderar i någon av stylesheeten (och inte via modules.less).
+/**
+* Anax Flat theme.
+*/
+@import url(common.less);
+@import url(light.less);
+@import url( 'https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url( 'https://fonts.googleapis.com/css?family=Parisienne');
+@import url( 'https://fonts.googleapis.com/css?family=Inconsolata');
+@import url( 'https://fonts.googleapis.com/css?family=Raleway:200');
+@magicNumber: 24px;
+
+a,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+table {
+    font-family: 'Inconsolata', monospace;
+}
+
+h1,
+h2 {
+    font-family: 'Parisienne', cursive;
+}
+
+code {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: red;
+}
+
+pre {
+    code {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1em;
+        color: red;
+    }
+}
