@@ -324,6 +324,7 @@
         // margin-top:    @magicNumber;
         // margin-top:    -0.1em;
         margin-bottom: @magicNumber;
+        overflow: scroll;
     }
 
     table.full-width,
@@ -410,22 +411,25 @@
 
 .typographyOtherElements() {
     hr {
-        position: relative;
-        top: -2px;
         border: 0;
         height: 1px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-
-        margin-top: 1.5 * @magicNumber - 1px;
-        margin-bottom: 1.5 * @magicNumber;
-
-        &:after {
-            content: "§";
-            position: relative;
-            top: -0.7em;
-            left: 50%;
-            padding: 0 0.25em;
-            background-color: @bgColorHr;
-        }
+        // position: relative;
+        // top: -2px;
+        // border: 0;
+        // height: 1px;
+        // background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        //
+        // margin-top: 1.5 * @magicNumber - 1px;
+        // margin-bottom: 1.5 * @magicNumber;
+        //
+        // &:after {
+        //     content: "§";
+        //     position: relative;
+        //     top: -0.7em;
+        //     left: 50%;
+        //     padding: 0 0.25em;
+        //     background-color: @bgColorHr;
+        // }
     }
 }

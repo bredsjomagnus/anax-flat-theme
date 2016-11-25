@@ -56,8 +56,8 @@ body {
 /*Jag kommer åt li i navbaren här */
 .rm-desktop {
     li {
-        margin: 1em 0 0 0.3em;
-        border: 1px dotted @submenuBgColor;
+        margin: 1em 0 0 1em;
+        border: 2px solid @footerColor;
         // Hover over a menu item
         &:hover {
             color: white;
@@ -65,11 +65,14 @@ body {
         }
 
         a {
-            background-color: @headerColor;
+            // background-color: #8a8c83;
+            background-color: #858e6f;
         }
     }
 }
-
+h1 {
+    border-bottom: 1px solid gray;
+}
 .footer{
     background-color: @footerColor;
     color: white;
@@ -148,7 +151,11 @@ body {
     width: 100%;
     margin-left: 0.1px;
 }
-
+// .site-logo-text{
+//     width: 150px;
+//     height: 80px;
+//     background: url("../img/favicon/design_utklippt.png") no-repeat center center fixed;
+// }
 //
 // .logo-1 {
 //     display: none;
