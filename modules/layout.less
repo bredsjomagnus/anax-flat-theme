@@ -22,6 +22,19 @@ html {
 .sidebar {
   .column(4);
 }
+.article{
+    // clear: both;
+    float: right;
+    .column(10);
+    padding-left: 20px;
+    border-left: 1px solid gray;
+    .boxsizing();
+}
+.sidebar-left{
+    float: left;
+    .column(2);
+
+}
 .main .has-sidebar {
     .column(8);
 }
@@ -158,6 +171,10 @@ pre code {
     .sidebar {
         width: 100%;
         // width: @gridSystemWidth;
+    }
+    .article{
+        .column(12);
+        border: none;
     }
 }
 @media screen and (max-width: 880px) {
