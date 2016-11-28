@@ -14,6 +14,7 @@
 @linkhoverColor: lightgray;
 @bgColorCodeInline: #282626;
 @borderColorCodeInline: #222222;
+@footerColor: #222222;
 // @linkColor: white;
 // .typographyHeadings();
 // .typographyTextElements();
@@ -34,7 +35,13 @@ body {
     color: white;
     .insetShadowBox();
 }
-
+.block.site-footer{
+    float: left;
+    padding: 0;
+    background-color: @footerColor;
+    width: 100%;
+    margin: 0;
+}
 h1,
 h2,
 h3,

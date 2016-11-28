@@ -23,6 +23,13 @@ html {
   	.container();
     max-width: @gridSystemWidth;
 }
+.footer{
+    min-height: 300px;
+}
+.block.site-footer{
+    float: left;
+    padding: 0;
+}
 .footer-column {
     .column(4);
     ul {
@@ -74,7 +81,9 @@ main.has-sidebar-left .article{
     clear: both;
     margin-bottom: 22px;
 }
-
+.block.site-footer{
+    clear: both;
+}
 .site-footer {
     text-align: center;
     .row();
