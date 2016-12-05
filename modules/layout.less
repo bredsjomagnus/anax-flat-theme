@@ -20,17 +20,9 @@ html {
     overflow-y: scroll;
 }
 .wrap-all {
-  	.container();//tar bort för att jag istället lade till container i inner-wrap
+  	.container();
+    // .column(12);
     max-width: @gridSystemWidth;
-}
-
-.row{
-    .row();
-}
-
-.inner-wrap{
-    .container();//testar att fixa horisontella griden.
-    max-width: 960px;
 }
 .side-name{
     max-width: 180px;
@@ -58,10 +50,13 @@ html {
 .sidebar {
   .column(4);
 }
-
+.after-main{
+    .column(12);
+}
 // Detta är lite av ett test för att få till bloggsidan.
 .blog-list-item{
     clear: both;
+    // .column(12);
 }
 
 hr {
@@ -72,40 +67,50 @@ hr {
 .article{
     // clear: both;
     float: right;
-    .column(10);
+    .column(12);
     padding-left: 20px;
     .boxsizing();
 }
 .blog-list{
     float: right;
-    .column(10);
+    .column(12);
     padding-left: 20px;
     .boxsizing();
 }
 main.has-sidebar-left .article{
     border-left: 1px solid gray;
-
-}
-.main.has-sidebar-left{
-    .column(8);
 }
 .sidebar-left{
     float: left;
     .column(2);
+    // background-color: red;
+    // opacity: 0.2;
 
 }
-.main .has-sidebar {
-    .column(3);
+.sidebar-right{
+    float: left;
+    .column(2);
+    // background-color: red;
+    // opacity: 0.2;
+
+}
+// .main .has-sidebar {
+//
+// }
+.main.has-sidebar{
+    .column(10);
+    // background-color: red;
+    // opacity: 0.2;
 }
 .block.site-footer{
-    // .row(); testar ta bort för att få till vgridet
+    .row();
     padding-top: 50px;
 }
 .main {
-    // .row(); testar ta bort för att få till vgridet
-    margin-left: 0.5%;
+    .row();
+    // margin-left: 0.5%;
+    .column(12);
     // margin-right: 10px;
-    .column(12); // för att få till vgridet
 }
 
 .outer-wrap-footer {
@@ -117,7 +122,7 @@ main.has-sidebar-left .article{
 }
 .site-footer {
     text-align: center;
-    // .row(); testar ta bort för att få till vgridet
+    .row();
     ul {
         margin: 0;
         padding: 0;
@@ -165,7 +170,7 @@ main.has-sidebar-left .article{
 
 .site-header {
     position: relative;
- //  	.row(); testar ta bort för att få till vgridet
+  	.row();
 }
 .logo1 {
     .column(2);
