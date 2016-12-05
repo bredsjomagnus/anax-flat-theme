@@ -20,8 +20,17 @@ html {
     overflow-y: scroll;
 }
 .wrap-all {
-  	.container();
+  	.container();//tar bort för att jag istället lade till container i inner-wrap
     max-width: @gridSystemWidth;
+}
+
+.row{
+    .row();
+}
+
+.inner-wrap{
+    .container();//testar att fixa horisontella griden.
+    max-width: 960px;
 }
 .side-name{
     max-width: 180px;
@@ -75,6 +84,10 @@ hr {
 }
 main.has-sidebar-left .article{
     border-left: 1px solid gray;
+
+}
+.main.has-sidebar-left{
+    .column(8);
 }
 .sidebar-left{
     float: left;
@@ -82,16 +95,17 @@ main.has-sidebar-left .article{
 
 }
 .main .has-sidebar {
-    .column(8);
+    .column(3);
 }
 .block.site-footer{
-    .row();
+    // .row(); testar ta bort för att få till vgridet
     padding-top: 50px;
 }
 .main {
-    .row();
+    // .row(); testar ta bort för att få till vgridet
     margin-left: 0.5%;
     // margin-right: 10px;
+    .column(12); // för att få till vgridet
 }
 
 .outer-wrap-footer {
@@ -103,7 +117,7 @@ main.has-sidebar-left .article{
 }
 .site-footer {
     text-align: center;
-    .row();
+    // .row(); testar ta bort för att få till vgridet
     ul {
         margin: 0;
         padding: 0;
@@ -151,7 +165,7 @@ main.has-sidebar-left .article{
 
 .site-header {
     position: relative;
-  	.row();
+ //  	.row(); testar ta bort för att få till vgridet
 }
 .logo1 {
     .column(2);
