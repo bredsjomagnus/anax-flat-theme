@@ -1,13 +1,14 @@
 @import url(default.less);
 
 @maxButtonFontSize: 1.8em;
-@navbarItemBgColor: #ad7fac;
+@navbarItemBgColor: #adad7f;
+@menubuttonColor: #213044;
 @wrapAllColor: #dbdbdb;
 @bodyColor: #d5d5d5;
 @wrapColor: #a7a7a7;
-@headerColor: #7f93ad;
-@footerColor: #7f93ad;
-@articleColor: #3e3155;
+@headerColor: #a0abba;
+@footerColor: #a0abba;
+@articleColor: #213044;
 /*Jag kommer åt li i navbaren här */
 .rm-desktop {
     li {
@@ -21,13 +22,13 @@
 
         a {
             // background-color: #8a8c83;
-            background-color: #ba8db9;
+            background-color: @menubuttonColor;
+            color: white;
         }
     }
 }
-.flash-wrap{
-    background: url("../img/purple_abstract_watercolor.jpg") no-repeat center center fixed;
-    z-index: 20;
+.flash-wrap img{
+    display: none;
 }
 .wrap-all{
     -webkit-box-shadow: none;
