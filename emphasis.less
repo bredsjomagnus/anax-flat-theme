@@ -1,0 +1,44 @@
+@import url(default.less);
+
+@maxButtonFontSize: 1.8em;
+@navbarItemBgColor: #ad7fac;
+@wrapAllColor: #dbdbdb;
+@bodyColor: #d5d5d5;
+@wrapColor: #a7a7a7;
+@headerColor: #7f93ad;
+@footerColor: #7f93ad;
+@articleColor: #3e3155;
+/*Jag kommer åt li i navbaren här */
+.rm-desktop {
+    li {
+        margin: 1em 0 0 1em;
+        border: 1px dotted @footerColor;
+        // Hover over a menu item
+        &:hover {
+            color: white;
+            background-color: @submenuBgColor;
+        }
+
+        a {
+            // background-color: #8a8c83;
+            background-color: #ba8db9;
+        }
+    }
+}
+.flash-wrap{
+    background: url("../img/purple_abstract_watercolor.jpg") no-repeat center center fixed;
+    z-index: 20;
+}
+.wrap-all{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: @wrapColor;
+}
+.article{
+    background-color: @articleColor;
+    color: white;
+    a {
+        color: #aea8e2;
+    }
+}

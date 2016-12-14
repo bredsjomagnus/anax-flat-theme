@@ -11,8 +11,22 @@
     -moz-box-shadow: inset 0 0 63px -7px rgba(0,0,0,0.75);
     box-shadow: inset 0 0 63px -7px rgba(0,0,0,0.75);
 }
-.shadowBox {
-    -webkit-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
-    box-shadow: 0 0 63px -7px rgba(0,0,0,0.75);
+.shadowBox(@sp) {
+    -webkit-box-shadow: 0 0 @sp 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 @sp 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 @sp 0 rgba(0,0,0,0.75);
+}
+
+.forestparallax{
+    /* The image used */
+    background-image: url("../img/forest_fullsize_greenish.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

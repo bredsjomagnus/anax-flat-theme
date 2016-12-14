@@ -1,0 +1,113 @@
+@import url(light.less);
+
+@depthPanelColor: #ebebeb;
+@depthTextColor: #3b3b3b;
+@shadow: 10px;
+@depthBorderThickness: 1px;
+@depthBorderColor: #383838;
+
+.flash-wrap{
+    display: none;
+}
+.next-previous{
+    // width: 10%;
+    // background-color: @depthPanelColor;
+    a {
+        color: black;
+    }
+    font-size: 24px;
+    font-weight: bold;
+}
+main.has-sidebar-left .article {
+    border-left: 1px solid black;
+}
+.breadcrumb-list{
+    a{
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+.article{
+    background-color: @depthPanelColor;
+    color: @depthTextColor;
+    border-radius: 5px;
+    .shadowBox(@shadow);
+    border: @depthBorderThickness solid @depthBorderColor;
+    .boxsizing();
+}
+.main{
+    // outline: @depthBorderThickness solid @depthBorderColor;
+}
+
+.after-main {
+    text-align: center;
+    p{
+        background-color: @depthPanelColor;
+        color: @depthTextColor;
+        // border-radius: 5px;
+    }
+}
+
+
+.sidebar{
+    background-color: @depthPanelColor;
+    color: @depthTextColor;
+    border-radius: 5px;
+    .shadowBox(@shadow);
+    padding: 5px;
+    .boxsizing();
+    border: @depthBorderThickness solid @depthBorderColor;
+}
+
+body{
+    .forestparallax();
+}
+
+.rm-navbar ul{
+    padding-bottom: 15px;
+}
+.main.has-sidebar-right{
+    background-color: @depthPanelColor;
+    color: @depthTextColor;
+    border-radius: 5px;
+    .shadowBox(@shadow);
+    border: @depthBorderThickness solid @depthBorderColor;
+    .boxsizing();
+}
+/*
+* BLOGGEN
+*/
+.rm-desktop li a{
+    background-color: @depthPanelColor;
+    border: @depthBorderThickness solid @depthBorderColor;
+}
+// MIN BLOGG titeln
+.article.blog{
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: black;
+    font-weight: bold;
+
+}
+// en bloggpost
+.blog-post{
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: black;
+    font-weight: bold;
+    .boxsizing();
+}
+// .blog-list{
+//     background-color: @depthPanelColor;
+//     color: @depthTextColor;
+//     border-radius: 5px;
+//     .shadowBox(@shadow);
+//     border: @depthBorderThickness solid @depthBorderColor;
+// }
