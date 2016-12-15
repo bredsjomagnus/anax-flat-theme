@@ -35,10 +35,11 @@ main.has-sidebar-left .article {
     .shadowBox(@shadow);
     border: @depthBorderThickness solid @depthBorderColor;
     .boxsizing();
+    opacity: 0.8;
 }
-.main{
+// .main{
     // outline: @depthBorderThickness solid @depthBorderColor;
-}
+// }
 
 .after-main {
     text-align: center;
@@ -48,8 +49,18 @@ main.has-sidebar-left .article {
         // border-radius: 5px;
     }
 }
+.wrap-all{
+    max-width: 100%;
+}
+.navbar2 {
+    float: left;
 
-
+}
+// .after-main{
+//     margin-top: 20px;
+//     border-top: 3px solid #3b7718;
+//     border-bottom: 3px solid #3b7718;
+// }
 .sidebar{
     background-color: @depthPanelColor;
     color: @depthTextColor;
@@ -58,6 +69,7 @@ main.has-sidebar-left .article {
     padding: 5px;
     .boxsizing();
     border: @depthBorderThickness solid @depthBorderColor;
+    opacity: 0.8;
 }
 
 body{
@@ -74,6 +86,7 @@ body{
     .shadowBox(@shadow);
     border: @depthBorderThickness solid @depthBorderColor;
     .boxsizing();
+    opacity: 0.8;
 }
 /*
 * BLOGGEN
@@ -81,9 +94,6 @@ body{
 .rm-desktop li a{
     background-color: @depthPanelColor;
     border: @depthBorderThickness solid @depthBorderColor;
-}
-.watercolor{
-    display: none;
 }
 // MIN BLOGG titeln
 .article.blog{
@@ -95,6 +105,9 @@ body{
     color: black;
     font-weight: bold;
 
+}
+.watercolor{
+    display: none;
 }
 // en bloggpost
 .blog-post{
